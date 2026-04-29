@@ -1,0 +1,41 @@
+.chooser-container {
+    background-color: rgb(158, 23, 25);
+}
+.chooser-body {
+    width: 200px;
+    height: 80px;
+    background: steelblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+  .chooser-head {
+    width: 80px;
+    height: 80px;
+    background: tan;
+  }
+
+  .chooser-legs {
+    width: 80px;
+    height: 80px;
+    background: navy;
+ }
+
+ .chooser-button {}
+
+  .chooserimagehead {
+      width: 50px;
+      height: 50px;
+  }
+
+  .chooserimagebody {
+    width: 50px;
+    height: 50px;
+  }
+
+  .chooserimagelegs {
+    width: 50px;
+    height: 50px;
+  }

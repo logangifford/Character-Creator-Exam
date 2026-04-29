@@ -1,0 +1,17 @@
+.arrow-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.arrow-button:hover {
+  background-color: #555;
+}
