@@ -3,6 +3,8 @@ import "./App.css";
 import { CharacterBody } from "character-body";
 import { Chooser } from "chooser";
 import { useState } from "react";
+import { TileBackground } from "tile-background";
+import { TourModal } from "./tour/tour-modal";
 
 function App() {
   const [head, setHead] = useState([
@@ -25,22 +27,42 @@ function App() {
   const [selectedBody, setSelectedBody] = useState(body[0]);
   const [selectedLegs, setSelectedLegs] = useState(legs[0]);
 
+  const [characterName, setCharacterName] = useState('');
+  const [tourActive, setTourActive] = useState(false);
+  const [tourKey, setTourKey] = useState(0);
+
+  const handleStartTour = () => {
+    setTourKey(k => k + 1);
+    setTourActive(true);
+  };
+
   return (
     <div className="app-body">
-      <div className="app-header">Description of project and date</div>
+      <button className="tour-start-btn" onClick={handleStartTour}>Start Tour</button>
+      {tourActive && <TourModal key={tourKey} onClose={() => setTourActive(false)} />}
+      <TileBackground></TileBackground>
+      <div id='tour-header' className="app-header">Description of project and date</div>
 
-      <div className="app-character-name">
+      <div className="app-character-name" id='tour-character-name'>
         <div>Character Name</div>
-        <div>Input</div>
+            <input
+      type="text"
+      value={characterName}
+      onChange={(e) => setCharacterName(e.target.value)}
+    />
+      </div>
+
+      <div className="app-character-name" id='character-onscreen'>
+        <div>{characterName}</div>
       </div>
 
       <div className="app-characters">
-        <CharacterBody
+        <CharacterBody          
           selectedHead={selectedHead}
           selectedBody={selectedBody}
           selectedLegs={selectedLegs}
         ></CharacterBody>
-        <Chooser
+        <Chooser          
           setSelectedHead={setSelectedHead}
           selectedHead={selectedHead}
           head={head}
@@ -52,6 +74,7 @@ function App() {
           legs={legs}
         ></Chooser>
       </div>
+      <div className="app-bottom-padding" id='character-bottom'></div>
     </div>
   );
 }

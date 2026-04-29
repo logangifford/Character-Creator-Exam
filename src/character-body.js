@@ -2,7 +2,7 @@ import "./character-body.css";
 
 function CharacterBody({ selectedHead, selectedBody, selectedLegs }) {
   return (
-    <div className="character-container">
+    <div id="character-body" className="character-container">
       <img
         className="character-head"
         src={selectedHead.url}
@@ -11,8 +11,8 @@ function CharacterBody({ selectedHead, selectedBody, selectedLegs }) {
           height: selectedHead.height,
           width: selectedHead.width,
           zIndex: selectedHead.z,
-          top: selectedHead.top,
-          left: selectedHead.left,
+          // top: selectedHead.top,
+          // left: selectedHead.left,
         }}
       />
       <img
@@ -23,8 +23,8 @@ function CharacterBody({ selectedHead, selectedBody, selectedLegs }) {
           height: selectedBody.height,
           width: selectedBody.width,
           zIndex: selectedBody.z,
-          top: selectedBody.top,
-          left: selectedBody.left,
+          // top: selectedBody.top,
+          // left: selectedBody.left,
         }}
       />
       <img
@@ -35,8 +35,8 @@ function CharacterBody({ selectedHead, selectedBody, selectedLegs }) {
           height: selectedLegs.height,
           width: selectedLegs.width,
           zIndex: selectedLegs.z,
-          top: selectedLegs.top,
-          left: selectedLegs.left,
+          // top: selectedLegs.top,
+          // left: selectedLegs.left,
         }}
       />
     </div>

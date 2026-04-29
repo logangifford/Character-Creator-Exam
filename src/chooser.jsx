@@ -1,8 +1,6 @@
 import { ArrowButton } from "arrow-button";
 import "./chooser.css";
-function MyButton() {
-  return <button className="chooser-button">⚔️</button>;
-}
+
 function Chooser({
   selectedHead,
   setSelectedHead,
@@ -48,7 +46,7 @@ function Chooser({
   };
 
   return (
-    <div className="chooser-container">
+    <div id='character-chooser' className="chooser-container">
       <div className="chooser-body">
         <ArrowButton onClick={moveheadleft} direction="left"></ArrowButton>
         <div>

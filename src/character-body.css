@@ -7,17 +7,25 @@
   .character-head {
     image-rendering: pixelated;
     position: absolute;
-    
+    transform: translateY(-50%) translateX(-50%);
+    left: 50%;
+    top: 50%;
   }
 
   .character-body {
     image-rendering: pixelated;
     position: absolute;
+        transform: translateY(-50%) translateX(-50%);
+    left: 50%;
+    top: 50%;
   }
 
   .character-legs {
     image-rendering: pixelated;
     position: absolute;
+        transform: translateY(-50%) translateX(-50%);
+    left: 50%;
+    top: 50%;
   }
 
 .character-container {

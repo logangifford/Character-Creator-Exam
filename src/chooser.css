@@ -28,14 +28,17 @@
   .chooserimagehead {
       width: 50px;
       height: 50px;
+      image-rendering: pixelated;
   }
 
   .chooserimagebody {
     width: 50px;
     height: 50px;
+    image-rendering: pixelated;
   }
 
   .chooserimagelegs {
     width: 50px;
     height: 50px;
+    image-rendering: pixelated;
   }

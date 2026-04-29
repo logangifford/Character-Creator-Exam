@@ -1,0 +1,21 @@
+  .tour-modal {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 300px;
+    z-index: 100;
+    font-family: 'Fira Code', Courier, monospace;
+    font-size: 20px;
+  }
+
+  .tour-arrow-left::before {
+    content: '←';
+    font-size: 24px;
+  }
+
+    .tour-arrow-right::before {
+    content: '→';
+    font-size: 24px;
+  }
